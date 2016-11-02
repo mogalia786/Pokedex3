@@ -10,13 +10,20 @@ import UIKit
 
 class PokeCell: UICollectionViewCell {
     
-    @IBOutlet weak var thumbImg: UIImageView
-    @IBOutlet weak var nameLbl: UILabel
+    @IBOutlet weak var thumbImg: UIImageView!
+    @IBOutlet weak var nameLbl: UILabel!
     
     var pokemon:Pokemon!
     
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        layer.cornerRadius=5.0
+    
+    }
+    
     func configureCell(pokemon: Pokemon){
-        nameLbl.text=self.pokemon.Name
+        self.pokemon=pokemon
+        nameLbl.text=self.pokemon.Name.capitalized
         thumbImg.image=UIImage(named: "\(self.pokemon.PokedexID)")
         
     }
