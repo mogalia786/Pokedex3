@@ -100,7 +100,7 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="hZf-fU-pQG">
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search Pokemon" translatesAutoresizingMaskIntoConstraints="NO" id="hZf-fU-pQG">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="lnC-KZ-7xU"/>
                                 </constraints>
@@ -126,6 +126,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="SearchBar" destination="hZf-fU-pQG" id="2Gy-g8-R74"/>
                         <outlet property="collection" destination="VSi-EI-29Y" id="PLY-x1-ck5"/>
                     </connections>
                 </viewController>
