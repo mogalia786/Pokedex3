@@ -154,6 +154,20 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         
+        var poke: Pokemon!
+
+        if inSearchMode{
+            
+            
+            poke=filteredPokemon[indexPath.row]
+        }else{
+            
+            poke=pokemon[indexPath.row]
+            
+        }
+        performSegue(withIdentifier: "PokemonDetailVC3", sender: poke)
+        
+        
     }
     
     
@@ -229,4 +243,19 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             
         }
     }
-}
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        // you first need to see what "segue" is being used then check what object is "sender" before passing object to sent VC *****dont forget to create a container in the receiving VC to hold the sent object
+        // in this case its the Pokemon object
+        if segue.identifier == "PokemonDetailVC3" {
+            if let detailVC=segue.destination as? PokemonDetailVC3{
+                if let poke=sender as? Pokemon{
+                    detailVC.pokemon=poke
+                }
+                
+            }
+            
+        }
+    }
+    }
