@@ -21,7 +21,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nAH-gi-dRm">
@@ -145,11 +145,10 @@
                         <viewControllerLayoutGuide type="bottom" id="HkR-Gf-FpI"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dN8-Qp-d8H">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1jh-yV-NfH">
-                                <frame key="frameInset" width="376" height="60"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1jh-yV-NfH">
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0DY-mj-sMG">
                                         <constraints>
@@ -176,8 +175,7 @@
                                     <constraint firstAttribute="bottom" secondItem="0DY-mj-sMG" secondAttribute="bottom" constant="5" id="gdp-Vi-8Gw"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="E6l-0m-XFG">
-                                <frame key="frameInset" minX="16" minY="68" width="288" height="242"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="E6l-0m-XFG">
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bqc-A2-ZiA">
                                         <subviews>
@@ -236,7 +234,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sI7-Bd-dWV">
-                                                        <frame key="frameInset" minX="188" width="100" height="21"/>
+                                                        <frame key="frameInset" minX="243" width="100" height="21"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Defence:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e4f-bp-KGf">
                                                                 <frame key="frameInset" width="73" height="21"/>
@@ -276,7 +274,7 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="un4-1L-zcE">
-                                                                <frame key="frameInset" minX="177" width="111" height="21"/>
+                                                                <frame key="frameInset" minX="232" width="111" height="21"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="PokedexID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOe-Aj-DfC">
                                                                         <frame key="frameInset" width="84" height="21"/>
@@ -314,7 +312,7 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="aqy-Rq-xvQ">
-                                                                <frame key="frameInset" minX="164" width="125" height="21"/>
+                                                                <frame key="frameInset" minX="219" width="125" height="21"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Base Attack:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L43-LR-GJj">
                                                                         <frame key="frameInset" width="97" height="21"/>
@@ -393,8 +391,18 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="baseAttackLBL" destination="aQc-EH-8NL" id="LOy-cD-tfG"/>
+                        <outlet property="currentEvoLBL" destination="jdb-hG-PZ1" id="woP-J6-jga"/>
+                        <outlet property="defenceLBL" destination="4XX-kl-wl7" id="E3y-M3-SA2"/>
+                        <outlet property="descriptionLBL" destination="MvM-bm-Qi1" id="2Yj-4t-uIb"/>
+                        <outlet property="heightLBL" destination="2Yp-wm-rvE" id="BBK-s5-jqm"/>
                         <outlet property="mainIMG" destination="MWC-fA-niq" id="2XT-PW-bMc"/>
                         <outlet property="nameLBL" destination="hej-ne-GKQ" id="a97-BJ-T3G"/>
+                        <outlet property="nextEvoLBL" destination="rjd-cd-ODG" id="oec-Uh-6Pm"/>
+                        <outlet property="nextEvoLImage" destination="HqS-wb-Trk" id="VDO-z3-lYw"/>
+                        <outlet property="pokedexidLBL" destination="lmn-kk-jEt" id="pRX-Do-QjG"/>
+                        <outlet property="typeLBL" destination="6Aq-Tf-cYV" id="DNW-eA-FFu"/>
+                        <outlet property="weightLBL" destination="uYd-cW-CRE" id="3O4-6d-pNJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GQ0-1R-aSF" userLabel="First Responder" sceneMemberID="firstResponder"/>
