@@ -41,12 +41,23 @@
                                             <action selector="musicBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1BW-OE-hby"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iSTROBE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3j-me-eWJ">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="Ufh-1D-VFt"/>
+                                            <constraint firstAttribute="width" constant="107" id="tD3-8Y-KeT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-BoldItalic" family="Avenir Next" pointSize="22"/>
+                                        <color key="textColor" red="0.36078431370000003" green="0.41960784309999999" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.34509803921568627" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="f3j-me-eWJ" firstAttribute="top" secondItem="nAH-gi-dRm" secondAttribute="top" constant="7" id="0tj-7l-oVX"/>
                                     <constraint firstAttribute="trailing" secondItem="j6o-dH-nge" secondAttribute="trailing" constant="8" id="75y-Tw-Zxj"/>
                                     <constraint firstItem="kwQ-jT-f1N" firstAttribute="centerY" secondItem="nAH-gi-dRm" secondAttribute="centerY" id="JJk-Mj-hco"/>
                                     <constraint firstAttribute="bottom" secondItem="kwQ-jT-f1N" secondAttribute="bottom" constant="8" id="LSu-sH-Zyx"/>
+                                    <constraint firstItem="f3j-me-eWJ" firstAttribute="centerX" secondItem="nAH-gi-dRm" secondAttribute="centerX" id="P7A-Eh-O2W"/>
                                     <constraint firstAttribute="height" constant="65" id="mGn-fl-bVB"/>
                                     <constraint firstItem="kwQ-jT-f1N" firstAttribute="centerX" secondItem="nAH-gi-dRm" secondAttribute="centerX" id="mPE-fK-jSk"/>
                                     <constraint firstAttribute="bottom" secondItem="j6o-dH-nge" secondAttribute="bottom" constant="8" id="s2l-N9-kh9"/>
@@ -63,7 +74,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PokeCell" id="NeG-kf-ryc" customClass="PokeCell" customModule="Pokedex3" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" contentMode="center" reuseIdentifier="PokeCell" id="NeG-kf-ryc" customClass="PokeCell" customModule="Pokedex3" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="105" height="105"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -72,6 +83,9 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4" translatesAutoresizingMaskIntoConstraints="NO" id="D3B-DP-ySm">
                                                     <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <accessibility key="accessibilityConfiguration">
+                                                        <accessibilityTraits key="traits" image="YES" playsSound="YES" updatesFrequently="YES"/>
+                                                    </accessibility>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="80" id="j5r-Tm-SIi"/>
                                                     </constraints>
@@ -107,17 +121,28 @@
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developed by iSTROBE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iX3-fW-h0l">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="201" id="APH-Mn-hNN"/>
+                                    <constraint firstAttribute="height" constant="21" id="nAt-UD-tZj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-BoldItalic" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" red="0.2470588235" green="0.31764705879999999" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="hZf-fU-pQG" secondAttribute="trailing" id="2iR-7G-L8Y"/>
                             <constraint firstItem="10I-tW-Tbi" firstAttribute="top" secondItem="hZf-fU-pQG" secondAttribute="bottom" id="6c2-6I-e2K"/>
                             <constraint firstItem="VSi-EI-29Y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="8Ce-Lk-qIJ"/>
+                            <constraint firstItem="iX3-fW-h0l" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9LW-hK-spJ"/>
                             <constraint firstItem="hZf-fU-pQG" firstAttribute="top" secondItem="nAH-gi-dRm" secondAttribute="bottom" id="IQo-d3-0jf"/>
                             <constraint firstAttribute="trailing" secondItem="nAH-gi-dRm" secondAttribute="trailing" id="LlS-KO-FTI"/>
                             <constraint firstItem="10I-tW-Tbi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Mv3-Zo-Dhv"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="10I-tW-Tbi" secondAttribute="bottom" id="ONy-n4-lZP"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VSi-EI-29Y" secondAttribute="bottom" constant="20" id="Szm-Fc-y2d"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VSi-EI-29Y" secondAttribute="bottom" constant="50" id="Szm-Fc-y2d"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="iX3-fW-h0l" secondAttribute="bottom" constant="8" id="gl8-4j-E6V"/>
                             <constraint firstAttribute="trailing" secondItem="VSi-EI-29Y" secondAttribute="trailing" constant="20" id="isS-HV-0C7"/>
                             <constraint firstItem="nAH-gi-dRm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jZg-PB-vJc"/>
                             <constraint firstItem="nAH-gi-dRm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="je2-Si-cN4"/>
@@ -391,18 +416,18 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="baseAttackLBL" destination="aQc-EH-8NL" id="LOy-cD-tfG"/>
-                        <outlet property="currentEvoLBL" destination="jdb-hG-PZ1" id="woP-J6-jga"/>
-                        <outlet property="defenceLBL" destination="4XX-kl-wl7" id="E3y-M3-SA2"/>
-                        <outlet property="descriptionLBL" destination="MvM-bm-Qi1" id="2Yj-4t-uIb"/>
-                        <outlet property="heightLBL" destination="2Yp-wm-rvE" id="BBK-s5-jqm"/>
+                        <outlet property="attackLBL" destination="aQc-EH-8NL" id="BXR-P4-m8o"/>
+                        <outlet property="currentPokemonImg" destination="jdb-hG-PZ1" id="aqh-zl-ofT"/>
+                        <outlet property="defenceLBL" destination="4XX-kl-wl7" id="lV6-Va-U7z"/>
+                        <outlet property="descLBL" destination="MvM-bm-Qi1" id="dsc-UM-uSS"/>
+                        <outlet property="heightLBL" destination="2Yp-wm-rvE" id="iS9-Qr-fEQ"/>
                         <outlet property="mainIMG" destination="MWC-fA-niq" id="2XT-PW-bMc"/>
                         <outlet property="nameLBL" destination="hej-ne-GKQ" id="a97-BJ-T3G"/>
-                        <outlet property="nextEvoLBL" destination="rjd-cd-ODG" id="oec-Uh-6Pm"/>
-                        <outlet property="nextEvoLImage" destination="HqS-wb-Trk" id="VDO-z3-lYw"/>
-                        <outlet property="pokedexidLBL" destination="lmn-kk-jEt" id="pRX-Do-QjG"/>
-                        <outlet property="typeLBL" destination="6Aq-Tf-cYV" id="DNW-eA-FFu"/>
-                        <outlet property="weightLBL" destination="uYd-cW-CRE" id="3O4-6d-pNJ"/>
+                        <outlet property="nextGenDescLBL" destination="rjd-cd-ODG" id="Ix9-vk-hUE"/>
+                        <outlet property="nextPokemonImg" destination="HqS-wb-Trk" id="Ds2-ZW-TQU"/>
+                        <outlet property="pokemonIDLBL" destination="lmn-kk-jEt" id="Xzd-GB-Ma0"/>
+                        <outlet property="typeLBL" destination="6Aq-Tf-cYV" id="nGP-Wf-PeJ"/>
+                        <outlet property="weightLBL" destination="uYd-cW-CRE" id="VZq-7e-f2q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GQ0-1R-aSF" userLabel="First Responder" sceneMemberID="firstResponder"/>

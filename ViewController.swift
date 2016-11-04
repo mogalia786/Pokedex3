@@ -13,7 +13,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 {
 
     @IBOutlet weak var collection: UICollectionView!
-    
     @IBOutlet weak var SearchBar: UISearchBar!
     
     var pokemon=[Pokemon]()
@@ -152,7 +151,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     
     
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         var poke: Pokemon!
 
@@ -163,6 +162,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }else{
             
             poke=pokemon[indexPath.row]
+            print("FAIZEL: Index Row is \(indexPath.row)")
             
         }
         performSegue(withIdentifier: "PokemonDetailVC3", sender: poke)
